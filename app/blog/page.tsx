@@ -1,3 +1,6 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
+
 import Link from "next/link";
 import { getSortedArticles } from "@/lib/articles";
 
