@@ -1,0 +1,15 @@
+{
+  "app": {
+    "[project]/app/page": [
+      "static/media/wlpwgwvFAVdoq2_v_6QU82RHaA-s.p.296fbbb2.woff2",
+      "static/media/memvYaGs126MiZpBA_UvWbX2vVnXBbObj2OVTS_mu0SC55I-s.p.fa0778d3.woff2"
+    ],
+    "[project]/app/blog/[id]/page": [
+      "static/media/wlpwgwvFAVdoq2_v_6QU82RHaA-s.p.296fbbb2.woff2",
+      "static/media/memvYaGs126MiZpBA_UvWbX2vVnXBbObj2OVTS_mu0SC55I-s.p.fa0778d3.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
