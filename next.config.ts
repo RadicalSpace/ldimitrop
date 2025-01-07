@@ -9,8 +9,10 @@ const nextConfig:NextConfig = {
   transpilePackages: ['next-mdx-remote'],
   // Optionally, add any other Next.js config below
   output:'export',
-  distDir:'dist'
-
+  distDir:'dist',
+  images:{
+    unoptimized:true,
+  }
 }
  
 const withMDX = createMDX({
