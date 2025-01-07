@@ -1,0 +1,299 @@
+---
+title: "Angular Momentum and Kepler's 2nd Law"
+subtitle: "The weirdness of rotational motion and its use in gravitation"
+author: "Leandros Dimitropoulos"
+category: "physics"
+date: "02/27/2024"
+image: "https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/10/14054042/Angular-Momentum-e1523431396247-300x266.png"
+source: "toppr.com"
+---
+
+# Introduction
+
+As you have learned in chapter 6, rotational motion bears many similarities to linear motion, as well as many striking differences. In rotational motion, the primary accelerator is center-seeking, whereas in linear motion it is parallel to movement. As you may have come to realize, however, many of the rotation equations are simply kinematics equations, but with various symbols swapped out. Displacement is substituted for degrees, velocity is swapped with rotational velocity, etc. This has the effect of turning equations such as $d=d_0+v_0t+\frac{1}{2}at^2$ into equations like $\theta = \theta_0 + \omega_0t + \frac{1}{2}\alpha t^2$, they bear the same structure, just with certain symbols exchanged for others. When a concept in rotational motion seems to be a substitute for a concept in linear motion, the rotational concept is called the rotational analog of the linear concept. For example, torque is the rotational analog of force, and angular acceleration is the rotational analog of acceleration.
+
+![A table of rotational analogs](https://search-static.byjusweb.com/question-images/byjus/infinitestudent-images/ckeditor_assets/pictures/203568/content_translational_and_rotational_motion1.png "table")
+<ImgCap
+    caption="A table of rotational analogs"
+ />
+
+What about something like mass? What's the rotational analog of mass? Well at first glance, that seems like a silly question, mass is mass, regardless of whether it is spinning or moving straight, just like how time in the rotational world is still time. But let's look at specific property of mass, inertia.
+
+Inertia is an object's resistance to changes in movement. For linear motion, this is directly proportional to mass. This shouldn't come as surprise, after all it is much harder to move a boulder than it is to move a pebble. However, for rotational motion, inertia gets a little more complicated.
+
+# The Moment of Inertia
+
+Suppose you were to attach a ball to the end of a small piece of string of negligible mass, and begin swinging the ball, lasso-style. How much effort would you need to put to get the ball moving quickly? Not a lot, right? Now suppose the string were not a small piece of string, but rather a very long rope of negligible mass. How much effort would it take to swing the ball quickly now? Probably a lot more right? All we did was change how far away the ball was, and somehow it became more difficult to swing. Why is that?
+
+This property is dictated by the rotation equation $v=r\omega$. The tangential velocity of a particle in circular motion is directly proportional to its distance from the center of rotation. As a result, the linear momentum of a rotating object, and hence its resistance to changes in movement, is dependent on its distance from the center of rotation. The rotational analog of an object's inertia (and as a result its mass) is called its "moment of inertia," it is given by the symbol $I$ and has units of $kg\cdot m^2$. For an particle in circular motion, its moment of inertia is given by the equation 
+
+$$
+I=mr^2
+$$
+
+where
+
+$m = $ the mass of the particle ($kg$)
+
+$r = $ the particle's distance from the center of rotation ($m$)
+
+$I = $ the moment of inertia of the particle ($kg\cdot m^2$)
+
+The moment of inertia of a rotating object is given by the integral sum of all of moment of inertia's of all of the particles within the object. Below is a table of moment of inertia's for various objects.
+
+![Moment of inertias](https://radicalspace.github.io/physics_docs/images/inertia.png)
+<ImgCap
+    caption="Moment of inertias for various objects rotating on various axes"
+ />
+
+<Quiz 
+    question="A particle of mass $5kg$ rotates 5m away from its center of rotation. What is its moment of inertia?"
+    options={["5 $kg\\cdot m^2$","25 $kg\\cdot m^2$","125 $kg\\cdot m^2$","100 $kg\\cdot m^2$"]}
+    answer={2}
+    explanation="Using $I=m\cdot r^2$, plug in mass and radius. $5\cdot 5^2=5\cdot 25=125$"
+ />
+ 
+ <Quiz 
+    question="What is the moment of inertia for a baseball of mass 10g and diameter 7cm when it rolls across the baseball field?"
+    options={["4.9 $mg\\cdot m^2$","1.4 $mg\\cdot m^2$","3.5 $mg\\cdot m^2$","12.25 $mg\\cdot m^2$"]}
+    answer={0}
+    explanation="Approximate a baseball as a solid sphere. Convert 10g to 0.01kg and 7cm to 0.07m. Divide the diameter by 2 to get radius. Finally, plug mass and radius into $I=\frac{2}{5}mr^2,\frac{2}{5}\cdot 0.01\cdot 0.035^2=4.9\cdot 10^{-6}$"
+ />
+
+Cool, now that we know the rotational analog of mass, let's use this to develop some more rotational analogs
+
+First, let's take a look at Newton's second law.
+
+$$
+\overrightharpoon{F}=m\overrightharpoon{a}
+$$
+
+We know that torque is the rotational analog of force is torque, the rotational analog of linear accleration is angular acceleration and the rotational analog of mass is moment of inertia. Can we just substitute each of these in place of their linear counterparts? Turns out we can! Doing this gives us the rotational analog of Newton's second law.
+
+$$
+\overrightharpoon{\tau}=I\overrightharpoon{\alpha}
+$$
+
+What about energy? Let's look at the linear form of kinetic energy
+
+$$
+K = \frac{1}{2}mv^2
+$$
+
+Doing the same thing gives us
+
+$$
+K = \frac{1}{2}I\omega^2
+$$
+ 
+Note how the symbol for rotational energy (K) hasn't changed. This is because rotational energy is still fundamentally kinetic energy. This is not a new type of energy, just a new way to calculate kinetic energy for rotational systems. On the other hand, torque, despite being the rotational analog of force, is fundmentally different from force. We measure torque in different units since it means something else in a rotational context. We can unveil the boring nature of rotational energy by simply reducing the equation in the context of a particle under circular motion. Remember, for particles under circular motion: $I=mr^2$ and $v=r\omega$
+
+$$
+    \begin{align*}
+    K&=\frac{1}{2}I\omega^2 \\
+    &=\frac{1}{2}mr^2 \omega^2 \\
+    &=\frac{1}{2}m(r\omega)^2 \\
+    &=\frac{1}{2}mv^2
+    \end{align*}
+$$
+
+Finally, let's take a look at one more important value of a system under linear motion, momentum. The equation for linear momentum is:
+
+$$
+\overrightharpoon{p} = m\overrightharpoon{v}
+$$
+
+Let's use the same trick to convert this to a rotational form
+
+$$ 
+L = I\omega
+$$
+
+This new "rotational momentum" is actually measured in different units, and is fundamentally different from linear momentum. For that reason, we use a different symbol. This is the formula for angular momentum in its simplest and most general form. For the case of a particle under circular motion, we can actually reduce this.
+
+$$
+    \begin{align*}
+    L&=I\omega \\
+    &=mr^2\omega \\
+    &=mr(r\omega) \\
+    &=mvr \\
+    &=pr
+    \end{align*}
+$$
+
+DON'T GET CONFUSED! ANGULAR MOMENTUM IS FUNDAMENTALLY DIFFERENT FROM LINEAR MOMENTUM. UNLIKE WITH ENERGY, THE LINEAR MOMENTUM OF A PARTICLE IN CIRCULAR MOTION CAN BE DIFFERENT FROM ITS ANGULAR MOMENTUM
+
+<Quiz
+    question="A point of mass 5kg, rotates 2m away from its center of rotation, and with a tangential velocity of 10 m/s. What is its angular momentum?"
+    options={["200 $kg \\cdot \\frac{m^2}{s}$","100 $kg \\cdot \\frac{m^2}{s}$","1000 $kg \\cdot \\frac{m^2}{s}$","500 $kg \\cdot \\frac{m^2}{s}$"]}
+    answer={1}
+    explanation="Using L=mvr, plug in $m=5$,$r=2$, and $v=10$;$5\cdot 2\cdot 10=100kg\cdot\frac{m^2}{s}$"
+ />
+
+# Angular Momentum
+
+The angular momentum of an object is a measure of its resistance to change its angular velocity. Recall Newton's second law, and its interpretation from a momentum-centric perspective.
+
+$$
+\overrightharpoon{F} = \frac{d \overrightharpoon{p}}{dt}
+$$
+
+The rotational equivalent of this is
+
+$$
+\overrightharpoon{\tau} = \frac{d\overrightharpoon{L}}{dt}
+$$
+
+With this new equation, we have a new outlet by which we can understand angular momentum. Just like how torque is force around an axis, angular momentum is momentum around an axis, and torque is a measure of its change over time.
+
+You may have noticed so far that all of our equations for angular momentum only use magnitude, the direction of angular momentum has not been defined yet. To do this, we need to understand one final fact about angular momentum.
+
+We showed earlier that the magnitude of angular momentum for a particle in circular motion is $L=rp$. This was introduced as a niche example but it actually has a much broader applicability that I've been hiding all along. The proper equation for the angular momentum of a particle in circular motion is:
+
+$$
+\overrightharpoon{L} = \overrightharpoon{r} \times \overrightharpoon{p}
+$$
+
+The angular momentum of an object is the integral sum of all of the angular momenta of the points within the object.
+
+To those familiar with linear algebra, you may notice the fact that this is a cross product of two vectors. The fact this is a cross product means that the angular momentum vector is perpendicular to the radius vector and the momentum vector. So for a particle in circular motion, the radius vector points into the particle from the center of rotation, the linear momentum vector points out of the particle in the direction of its instantaneous velocity, and the angular momentum vector points out of the particle...upwards or downwards?
+
+![Angular momentum](https://www.lancaster.ac.uk/staff/schomeru/lecturenotes/Quantum%20Mechanics/ang1.png)
+<ImgCap
+    caption="The angular momentum for a particle in circular motion points either upwards or downwards"
+ />
+In truth, there is no intuitive reason why angular momentum points in such a curious direction. Rotational motion has many, many, extreme nuances that aren't integral for a beginning physicist to understand. In reality, rotational motion can't be described accurately with linear algebra, but can be approximated. To understand rotational motion to its fullest extent, you would have to understand the role tensors or matrices play into all of this. Many introductory physics classes don't go into this much detail because it's far too difficult to understand and only useful in extreme circumstances. This gleeful glossing-over of many important nuances, however, culminates in angular momentum having a nonsensical direction for seemingly no reason. That's not to say this intepretation isn't useful, though. Many physicists still use this odd direction because it happens to cleanly follow many other laws of nature, some of which I will get to later. But for the time being, you're unfortunately going to have to accept that angular momentum has a weird direction for no real reason.
+
+![Direction of angular momentum](https://pressbooks.bccampus.ca/physics0312chooge/wp-content/uploads/sites/113/2017/02/Figure_11_07_01a.jpg)
+<ImgCap
+    caption="The right hand rule for a rotating disk"
+ />
+ 
+To determine the direction of angular momentum, you can use the right hand rule. Using your right hand, point your palm towards the rotating environment, and curl your fingers in the direction of the movement. The direction your thumb points to is the direction of angular momentum.
+
+# The Conservation of Angular Momentum
+
+Let's begin to see how we can use angular momentum to solve physics problems
+
+Like how many linear physical quantities have rotational analogs, so do many physical laws for linear motion. Let's take a look at the law of conservation of momentum. For a closed, isolated, system:
+
+$$
+\overrightharpoon{p}_{net} = constant
+$$
+
+Does this have a rotational analog? Why of course!
+
+$$
+\overrightharpoon{L}_{net} = constant
+$$
+
+or
+
+$$
+I_i\overrightharpoon{\omega}_i=I_f\overrightharpoon{\omega}_f
+$$
+
+or for a particle:
+
+$$
+m_iv_ir_i=m_fv_fr_f
+$$
+$$
+\overrightharpoon{p}_i\times\overrightharpoon{r}_i=\overrightharpoon{p}_f\times\overrightharpoon{r}_f
+$$
+$$
+(m_i\overrightharpoon{v}_i)\times\overrightharpoon{r}_i=(m_f\overrightharpoon{v}_f)\times\overrightharpoon{r}_f
+$$
+
+This is the law of conservation of angular momentum, and it is an incredibly powerful law of rotational motion. Take the example of a figure skater spinning.
+
+![Figure skater](https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/2952/2018/01/31194924/CNX_UPhysics_11_03_IceSkate.jpg)
+<ImgCap
+    caption="A figure skater speeding up by pulling their arms in"
+ />
+
+If you've ever watched figure skating, you may have noticed that, whenever a figure skater spins, they seem to spin faster when they pull their arms closer to their body. What's the reasoning for this? The only force they apply is pulling their arms inwards, so how do they spin faster? Well the figure skater's change in speed has to do with the conservation of angular momentum.
+
+Remember that an object's moment of inertia has to do with the radius of that object. When the figure skater pulls her arms in, her "radius" decreases, resulting in a decrease in her moment of inertia. The law of conservation of angular momentum states that this decrease in inertia must result in an increase in angular velocity, in order to keep her angular momentum constant. This increase in angular velocity is what we observe when the skater speeds up.
+
+<Quiz
+    question="A disk of mass 2.0 kg and radius 60 cm with a small mass of 0.05 kg attached at the edge is rotating at 2.0 rev/s. The small mass, while attached to the disk, slides gradually to the center of the disk. What is the disk’s final rotation rate (in rev/s)?"
+    options={["1 rev/s","1.05 rev/s","1.1 rev/s","1.15 rev/s"]}
+    answer={1}
+    explanation="The systems initial angular momentum is given by the disk's initial angular momentum plus the point mass's angular momentum, or $L=\frac{1}{2}m_{disk}r^2_{disk}\omega{i}+m_{point}r^2_{disk}\omega_i$ By the law of conservation of angular momentum, this value must be equal to the system's final angular momentum $L=\frac{1}{2}m_{disk}r^2_{disk}\omega{f}+m_{point}r^2_{disk}\omega_f$. Setting these equal to each other we have $\frac{1}{2}m_{disk}r^2_{disk}\omega{i}+m_{point}r^2_{disk}\omega_i=\frac{1}{2}m_{disk}r^2_{disk}\omega{f}+m_{point}r^2_{disk}\omega_f$ Plugging in values in we get $\frac{2\cdot 0.6^2 \cdot 4\pi}{2}+0.05\cdot 0.6^2\cdot 4\pi=\frac{2\cdot 0.6^2 \cdot \omega_f}{2}+0.05\cdot 0.6^2\cdot \omega_f$. Solving for $\omega_f$ we get $\omega_f=2.1\pi \frac{rad}{s}$ or $1.05 \frac{rev}{s}$"
+ />
+ 
+# Orbits
+
+As it turns out, the conservation of angular momentum can actually be very useful in analyzing orbits. Let's learn how we can use angular momentum to better understand orbits.
+
+You may recall Kepler's 2nd Law from physics: Orbits sweep out equal areas over equal time periods
+
+![Orbit](https://labster-image-manager.s3.amazonaws.com/v2/KEP/c486ce13-33dc-4d0a-b0e8-ff563d917cd1/KEP_SecondLaw.en.x512.png)
+<ImgCap
+    caption="Kepler's 2nd law"
+ />
+To amateur physicists, the law may seem rather illusive and hard to grasp in terms of any equations. As it turns out, though, this equation has a lot to do with the conservation of angular momentum.
+
+Let's consider the area swept out by the orbit in a really short period of time. Since we are looking at really short time intervals, we can approximate the slice of our orbit as simply being a slice of a circle, rather than a non-circular ellipse. One side of our slice, is, of course, the radius of the orbit, the other side is the radius times the radian change of the orbit. Once again, we can make a rather rough approximation, and say this "circular" slice is rather a right triangle
+
+![Orbit Right Triangle](http://burro.case.edu/Academics/Astr221/Gravity/triangle.gif)
+<ImgCap
+    caption="Kepler's 2nd law"
+ />
+
+The area of this tiny triangle is given by $\frac{1}{2}r^2d\theta$ (note that $d\theta$ here represents our instantaneous change in angle measure we mentioned earlier), and it's rate of change of this is thus given by $\frac{1}{2}r^2\omega$ or $\frac{1}{2}rv$
+
+Notice anything familiar with this equation? Recall our formula for the angular momentum of a particle
+
+$$
+L=mvr
+$$
+
+If we divide by $2m$ we get 
+
+$$
+\frac{1}{2}rv
+$$
+
+which is just our formula for rate of change of orbital area from earlier!
+
+We can thus write the rate of change of orbital area as:
+
+$$
+\frac{dA}{dt} = \frac{L}{2m}
+$$
+
+($\frac{dA}{dt}$ here just represents the rate of change of orbital area)
+
+Since angular momentum is always conserved, this must mean that—assuming mass is constant—the rate of change of an orbit's area will also be constant. A constant rate of change means that the orbit will sweep out equal areas over equal time periods, just like how a runner running at a constant velocity will cover equal distances over equal time periods.
+
+Though Kepler's 2nd law typically isn't introduced with any mathematical models, we can actually use the math we used above to do some math!
+
+Remember our formula for $\frac{dA}{dt}$ from earlier
+
+$$
+\frac{1}{2}rv
+$$
+
+Since we have just established this value stays constant in an orbit. We can compare it's values at different points in time, just like we do with linear momentum. In other words:
+
+$$
+\frac{1}{2}r_iv_i=\frac{1}{2}r_fv_f
+$$
+
+or just
+
+$$
+r_iv_i=r_fv_f
+$$
+
+To those who are calc-literate, more in-depth explanations can be found [here](http://burro.case.edu/Academics/Astr221/Gravity/kep2rev.htm) and [here](https://math.mit.edu/~jorloff/suppnotes/suppnotes02/k.pdf)
+
+<Quiz
+    question="A planet of mass $5\times10^{23} kg$ orbits with a velocity of 30$\frac{km}{s}$ when it is 140 Gigameters away from its central body. How fast does it orbit when it is 142 Gigameters away from the central body?"
+    options={["29.4 km/s","29.5 km/s","29.6 km/s","29.7 km/s"]}
+    answer={2}
+    explanation="Using $r_iv_i=r_fv_f,30\cdot 10^3\cdot 140 \cdot 10^9 = 142\cdot 10^9\cdot v_f$, rearranging gives us $v_f=\frac{30\cdot 10^3\cdot 140\cdot 10^9}{142\cdot 10^9}=29.6\frac{km}{s}$"
+ />
+Anyways, that's about it for this lesson!
