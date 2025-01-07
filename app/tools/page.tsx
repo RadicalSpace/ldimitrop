@@ -4,9 +4,12 @@ import Link from "next/link";
 import { Poppins } from "next/font/google";
 import { Lexend } from "next/font/google";
 
-const lexend = Lexend()
+const lexend = Lexend({
+  subsets:["latin"]
+})
 
 const roboto = Poppins({
+  subsets:["latin"],
   weight:["400"]
 })
 

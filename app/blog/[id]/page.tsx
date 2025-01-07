@@ -14,6 +14,7 @@ import ImgCap from "../(components)/imgcap"
 import { getSortedArticles } from "@/lib/articles"
 
 const font = Libre_Caslon_Text({
+    subsets:["latin"],
     weight:["400","700"]
 })
 
