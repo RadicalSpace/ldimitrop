@@ -11,16 +11,26 @@ import rehypeStringify from 'rehype-stringify'
 import moment from "moment"
 import Quiz from "../(components)/quiz"
 import ImgCap from "../(components)/imgcap"
+import { getSortedArticles } from "@/lib/articles"
 
 const font = Libre_Caslon_Text({
     weight:["400","700"]
 })
 
 
+export async function generateStaticParams() {
+    const articles = getSortedArticles()
+    console.log(articles)
+    return articles.map((article) => ({
+        id: article.id,
+      }))
+  }
+   
+
 const Article = async ({params}:{params:Promise<{id:string}>}) => {
     const ArticlesDirectory = path.join(process.cwd(),"articles")
-    const p = await params
-    const fullPath = path.join(ArticlesDirectory, `${p.id}.mdx`)
+    const {id} = await params
+    const fullPath = path.join(ArticlesDirectory, `${id}.mdx`)
     const fileContents = fs.readFileSync(fullPath,"utf-8")
     const article = await compileMDX<{
         title:string
