@@ -2,18 +2,6 @@ import fs from "fs"
 import moment from "moment"
 import path from "path"
 import matter from "gray-matter"
-import {remark} from "remark"
-import remarkParse from 'remark-parse'
-import html from "remark-html"
-import remarkMath from "remark-math"
-import rehypeKatex from "rehype-katex"
-import {unified} from 'unified'
-import remarkRehype from "remark-rehype"
-import rehypeStringify from 'rehype-stringify'
-import remarkMdx from "remark-mdx"
-import { serialize } from "next-mdx-remote/serialize"
-import { MDXRemote } from "next-mdx-remote"
-import { compileMDX } from "next-mdx-remote/rsc"
 
 export type ArticleItem = {
     id:string

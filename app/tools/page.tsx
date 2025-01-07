@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 import { Lexend } from "next/font/google";

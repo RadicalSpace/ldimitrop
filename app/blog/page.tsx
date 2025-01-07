@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getCategorizedArticles, getSortedArticles } from "@/lib/articles";
-import { ArticleItem } from "@/lib/articles";
+import { getSortedArticles } from "@/lib/articles";
 
 export default function Blog() {
   const articles = getSortedArticles()
