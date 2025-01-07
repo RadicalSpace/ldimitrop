@@ -1,12 +1,11 @@
 'use client'
 import {Field, Label, Radio, RadioGroup} from '@headlessui/react'
-import { select } from 'framer-motion/client'
 import { useState, useEffect } from 'react'
-const katex = require('katex')
+import katex from 'katex'
 
-export default function Quiz(props:any){
-    let [selected, setSelected] = useState(0)
-    let [click,setClick] = useState(false)
+export default function Quiz(props:{answer:number,question:string,options:string[],explanation:string}){
+    const [selected, setSelected] = useState(0)
+    const [click,setClick] = useState(false)
     useEffect(() => {
         setClick(false);
     }, [selected]);
