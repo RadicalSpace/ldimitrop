@@ -11,7 +11,6 @@ import rehypeStringify from 'rehype-stringify'
 import moment from "moment"
 import Quiz from "../(components)/quiz"
 import ImgCap from "../(components)/imgcap"
-import 'ldimitrop/katex/dist/katex.min.css';
 
 const font = Libre_Caslon_Text({
     subsets:['latin'],
