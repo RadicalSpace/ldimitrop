@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend, Open_Sans } from 'next/font/google'
 import Link from "next/link";
-import 'katex/dist/katex.min.css';
+import '/ldimitrop/katex/dist/katex.min.css';
 
 import "./globals.css";
 
