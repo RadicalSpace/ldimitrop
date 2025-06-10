@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 import createMDX from '@next/mdx'
  
-const isProd = process.env.NODE_ENV == 'production'
+const isProd = process.env.NODE_ENV === 'production'
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
