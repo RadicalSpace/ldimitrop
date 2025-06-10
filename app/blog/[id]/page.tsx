@@ -17,6 +17,10 @@ const font = Libre_Caslon_Text({
     weight:["400","700"]
 })
 
+export async function generateStaticParams() {
+    return fs.readdirSync(path.join(process.cwd(),"articles")).map((post)=>({id:post.substring(0,post.length-4)}))
+    //return [{id:"keplers-2nd-law"},{id:"test"}]
+}
 
 const Article = async ({params}:{params:Promise<{id:string}>}) => {
     const ArticlesDirectory = path.join(process.cwd(),"articles")
