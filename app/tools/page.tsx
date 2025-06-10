@@ -1,13 +1,15 @@
 'use client'
-import Image from "next/image";
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 import { Lexend } from "next/font/google";
 
-const lexend = Lexend()
+const lexend = Lexend({
+  subsets:['latin']
+})
 
 const roboto = Poppins({
-  weight:["400"]
+  weight:["400"],
+  subsets:['latin']
 })
 
 export default function Tools() {

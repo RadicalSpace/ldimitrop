@@ -13,6 +13,7 @@ import Quiz from "../(components)/quiz"
 import ImgCap from "../(components)/imgcap"
 
 const font = Libre_Caslon_Text({
+    subsets:['latin'],
     weight:["400","700"]
 })
 

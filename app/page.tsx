@@ -1,5 +1,3 @@
-import Image from "next/image";
-import imageAsset from '../public/dark_blue_jacket.jpg'
 import { Open_Sans } from "next/font/google";
 
 const font = Open_Sans({
