@@ -3,6 +3,8 @@ import { Lexend, Open_Sans } from 'next/font/google'
 import Link from "next/link";
 import "./globals.css";
 
+//<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"crossOrigin="anonymous"/>
+
 const font = Lexend({
   subsets: ['latin'],
 })
@@ -23,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head><link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"crossOrigin="anonymous"/></head>
+      <head>
+        <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+      </head>
       <body>
         <div className="sticky top-0 z-10 bg-white">
           <div className={font1.className}>

@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   transpilePackages: ['next-mdx-remote'],
-  trailingSlash: true,
-  assetPrefix: isProd ? '/ldimitrop' : '',
-  basePath: isProd ? "/ldimitrop" : '',
   // Optionally, add any other Next.js config below
   output: 'export',
 }
