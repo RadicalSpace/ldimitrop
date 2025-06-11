@@ -12,6 +12,7 @@ import moment from "moment"
 import Quiz from "../(components)/quiz"
 import ImgCap from "../(components)/imgcap"
 import Head from 'next/head';
+import 'katex/dist/katex.min.css';
 
 
 const font = Libre_Caslon_Text({
