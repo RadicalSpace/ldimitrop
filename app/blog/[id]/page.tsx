@@ -37,8 +37,8 @@ const Article = async ({params}:{params:Promise<{id:string}>}) => {
         source:fileContents,
         options:{
             mdxOptions:{
-                remarkPlugins:[remarkMath],
-                rehypePlugins:[remarkRehype,rehypeKatex,rehypeStringify]
+                remarkPlugins:[remarkMath,remarkRehype],
+                rehypePlugins:[rehypeKatex,rehypeStringify]
             },
             parseFrontmatter:true
         },

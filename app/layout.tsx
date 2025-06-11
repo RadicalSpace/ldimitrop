@@ -18,10 +18,7 @@ const font1 = Open_Sans({
 export const metadata: Metadata = {
   title: "ldimitrop.net",
   description: "A site about me!",
-  other: {
-    // THIS IS THE IMPORTANT BIT
-    'link:stylesheet': 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css',
-  }
+  
 };
 
 export default function RootLayout({
