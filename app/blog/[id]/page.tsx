@@ -11,6 +11,8 @@ import rehypeStringify from 'rehype-stringify'
 import moment from "moment"
 import Quiz from "../(components)/quiz"
 import ImgCap from "../(components)/imgcap"
+import Head from 'next/head';
+
 
 const font = Libre_Caslon_Text({
     subsets:['latin'],
@@ -49,7 +51,15 @@ const Article = async ({params}:{params:Promise<{id:string}>}) => {
     })
 
     return (
-        <section>
+        <>
+            <Head>
+                <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+                integrity="sha384-mll67QQaAHXpEivFQxVwZzJrEjl1Lxqj9GsygP+1ATXc3vUxdOjBLF+zZyi1o+I2"
+                crossOrigin="anonymous"
+                />
+            </Head>
             <ReadingBar></ReadingBar>
             <div className={`fixed w-[5%] h-full bg-gradient-to-r from-[rgb(220,220,220)] opacity-25`}></div>
             <div className="fixed w-[5%] h-full bg-gradient-to-l left-[95%] from-[rgb(220,220,220)] opacity-25"></div>
@@ -67,7 +77,7 @@ const Article = async ({params}:{params:Promise<{id:string}>}) => {
                     <article className="article">{article.content}</article>
                 </div>
             </div>
-        </section>
+        </>
     )
 }
 

@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Lexend, Open_Sans } from 'next/font/google'
 import Link from "next/link";
 import "./globals.css";
+import 'katex/dist/katex.min.css';
+import Head from 'next/head';
+
+
 
 //<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"crossOrigin="anonymous"/>
 
@@ -25,9 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
-      </head>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+          integrity="sha384-mll67QQaAHXpEivFQxVwZzJrEjl1Lxqj9GsygP+1ATXc3vUxdOjBLF+zZyi1o+I2"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <body>
         <div className="sticky top-0 z-10 bg-white">
           <div className={font1.className}>
