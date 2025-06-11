@@ -5,7 +5,8 @@ import path from "path"
 import fs from 'fs'
 import remarkParse from 'remark-parse'
 import remarkMath from "remark-math"
-import rehypeKatex from "rehype-katex"
+//import rehypeKatex from "rehype-katex"
+import rehypeMathjax from 'rehype-mathjax'
 import remarkRehype from "remark-rehype"
 import rehypeStringify from 'rehype-stringify'
 import moment from "moment"
@@ -38,7 +39,7 @@ const Article = async ({params}:{params:Promise<{id:string}>}) => {
         options:{
             mdxOptions:{
                 remarkPlugins:[remarkMath,remarkParse,remarkRehype],
-                rehypePlugins:[rehypeKatex,rehypeStringify]
+                rehypePlugins:[rehypeMathjax,rehypeStringify]
             },
             parseFrontmatter:true
         },
