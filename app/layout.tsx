@@ -1,11 +1,10 @@
+'use client'
 import type { Metadata } from "next";
 import { Lexend, Open_Sans } from 'next/font/google'
 import Link from "next/link";
 import "./globals.css";
+import 'katex/dist/katex.min.css';
 
-
-
-//<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"crossOrigin="anonymous"/>
 
 const font = Lexend({
   subsets: ['latin'],
@@ -14,13 +13,13 @@ const font = Lexend({
 const font1 = Open_Sans({
   subsets: ['latin'],
 })
-
+/*
 export const metadata: Metadata = {
   title: "ldimitrop.net",
   description: "A site about me!",
   
 };
-
+*/
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+          integrity="sha384-vZTG03Zklx6OdTnftH7eU3C0cVYc0uW8Vg7k4OekF2v+cEKkqO54Z8R4T7b6R1gA"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <div className="sticky top-0 z-10 bg-white">
           <div className={font1.className}>

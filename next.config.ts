@@ -1,6 +1,4 @@
 import type { NextConfig } from "next";
-
-import createMDX from '@next/mdx'
  
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -11,13 +9,7 @@ const nextConfig: NextConfig = {
   transpilePackages: ['next-mdx-remote'],
   // Optionally, add any other Next.js config below
   output: 'export',
-  basePath:'/ldimitrop',
-  assetPrefix:'/ldimitrop/'
+  
 }
- 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-})
- 
-// Merge MDX config with Next.js config
-export default withMDX(nextConfig)
+
+export default nextConfig

@@ -6,7 +6,6 @@ import fs from 'fs'
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import remarkRehype from "remark-rehype"
-import rehypeStringify from 'rehype-stringify'
 import moment from "moment"
 import Quiz from "../(components)/quiz"
 import ImgCap from "../(components)/imgcap"
@@ -38,7 +37,7 @@ const Article = async ({params}:{params:Promise<{id:string}>}) => {
         options:{
             mdxOptions:{
                 remarkPlugins:[remarkMath,remarkRehype],
-                rehypePlugins:[rehypeKatex,rehypeStringify]
+                rehypePlugins:[rehypeKatex]
             },
             parseFrontmatter:true
         },
