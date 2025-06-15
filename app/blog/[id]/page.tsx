@@ -62,7 +62,7 @@ const Article = async ({params}:{params:Promise<{id:string}>}) => {
                         <div className="inline-block">{moment(article.frontmatter.date,"MM-DD-YYYY").format("MMMM Do YYYY")}</div>
                     </div>
                 </div>
-                <div className={`w-1/2 mx-auto text-justify mt-10 leading-[2em] ${font.className}`}>
+                <div className={`w-2/3 mx-auto text-justify mt-10 leading-[2em] ${font.className}`}>
                     <article className="article">{article.content}</article>
                 </div>
             </div>
