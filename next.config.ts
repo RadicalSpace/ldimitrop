@@ -9,7 +9,9 @@ const nextConfig: NextConfig = {
   transpilePackages: ['next-mdx-remote'],
   // Optionally, add any other Next.js config below
   output: 'export',
-  
+  basePath: '/ldimitrop',
+  assetPrefix: '/ldimitrop',
+  trailingSlash: true
 }
 
 export default nextConfig
