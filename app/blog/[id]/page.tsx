@@ -9,6 +9,7 @@ import remarkRehype from "remark-rehype"
 import moment from "moment"
 import Quiz from "../(components)/quiz"
 import ImgCap from "../(components)/imgcap"
+import M from "../(components)/m"
 
 
 const font = Libre_Caslon_Text({
@@ -43,7 +44,8 @@ const Article = async ({params}:{params:Promise<{id:string}>}) => {
         },
         components: {
             Quiz,
-            ImgCap
+            ImgCap,
+            M
         }
     })
 
