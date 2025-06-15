@@ -1,5 +1,4 @@
 'use client'
-import type { Metadata } from "next";
 import { Lexend, Open_Sans } from 'next/font/google'
 import Link from "next/link";
 import "./globals.css";
