@@ -1,4 +1,3 @@
-/*
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
@@ -12,18 +11,13 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   compat.extends("next/core-web-vitals", "next/typescript"),
-];
-
-export default eslintConfig;
-*/
-import { defineConfig } from "eslint/config";
-
-export default defineConfig([
-	{
+  {
 		rules: {
 			eqeqeq: "off",
 			"no-unused-vars": "off",
 			"react/no-unescaped-entities": "off"
 		},
-	},
-]);
+	}
+];
+
+export default eslintConfig;

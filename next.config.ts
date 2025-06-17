@@ -2,12 +2,8 @@ import type { NextConfig } from "next";
  
 const isProd = process.env.NODE_ENV === 'production'
 
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/
-});
-
 /** @type {import('next').NextConfig} */
-const nextConfig = withMDX({
+const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   transpilePackages: ['next-mdx-remote'],
@@ -15,6 +11,6 @@ const nextConfig = withMDX({
   output: 'export',
   basePath: '/ldimitrop',
   assetPrefix: '/ldimitrop/',
-})
+}
 
 export default nextConfig

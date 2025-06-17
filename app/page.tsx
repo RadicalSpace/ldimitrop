@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <div className={`${font.className}`}> 
       <div className="text-center font-bold text-7xl py-28">Home Page</div>
-      <div className="mx-28 flex">
-        <div className="bg-blue-400 p-4 text-2xl flex-grow text-white font-bold mr-8">Hello</div>
+      <div className="lg:mx-28 md:mx-4 sm:flex">
+        <div className="bg-blue-400 p-4 text-2xl sm:flex-grow text-white font-bold lg:mr-8 md:mr-4">Hello</div>
         <div>
-          <img src={`/ldimitrop/dark_blue.png`} alt="dark blue jacket" className="right-0 w-96 h-96 object-cover border object-left-top flex-none" />
-          <div className="bg-gray-200 text-gray-400 p-4 font-bold mt-2">hello</div>
+          <img src={`/ldimitrop/dark_blue.png`} alt="dark blue jacket" className="right-0 sm:w-96 sm:h-96 w-full  object-cover border object-left-top flex-none" />
+          <div className="bg-gray-200 text-gray-400 p-4 font-bold sm:mt-2">hello</div>
         </div>
       </div>
     </div>
