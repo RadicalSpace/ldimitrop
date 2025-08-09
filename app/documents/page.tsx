@@ -35,7 +35,7 @@ export default function Documents() {
                                     </li>
                                     <li>
                                         <div className="hover:pl-6 transition-all duration-200 ease-in-out mb-2">
-                                            <Link href="./leche.pdf" className="hover:bg-blue-100/50 mb-2 p-2 transition-all duration-200 ease-in-out">
+                                            <Link href="./electron_configs.pdf" className="hover:bg-blue-100/50 mb-2 p-2 transition-all duration-200 ease-in-out">
                                                 Electron Config. Practice
                                             </Link>
                                         </div>
@@ -74,7 +74,7 @@ export default function Documents() {
                                 <ul>
                                     <li>
                                         <div className="hover:pl-6 transition-all duration-200 ease-in-out mb-2">
-                                            <Link href="./leche.pdf" className="hover:bg-blue-100/50 mb-2 p-2 transition-all duration-200 ease-in-out">
+                                            <Link href="./electron_configs.pdf" className="hover:bg-blue-100/50 mb-2 p-2 transition-all duration-200 ease-in-out">
                                                 Electron Config. Practice
                                             </Link>
                                         </div>
