@@ -7,7 +7,7 @@ import { CloseButton, Disclosure, DisclosureButton, DisclosurePanel } from '@hea
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence, motion, easeOut } from "framer-motion"
 import { useState } from "react"
-
+//
 const font = Lexend({
   subsets: ['latin'],
 })
